@@ -1,0 +1,12 @@
+services:
+   node:
+    build: .
+    container_name: node-container
+    ports:
+      - "4000:3000"
+    volumes:
+      - "./:/app"
+      - "/app/node_modules"
+
+
+    command: node app.js
